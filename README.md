@@ -78,9 +78,9 @@ Add it in your root build.gradle at the end of repositories:
             int menuPosition = menuBridge.getPosition(); // 菜单在RecyclerView的Item中的Position。
 
             if (direction == SwipeMenuRecyclerView.RIGHT_DIRECTION) {
+                Toast.makeText(getApplicationContext(), "list第" + adapterPosition + "; 右侧菜单第" + menuPosition, Toast.LENGTH_SHORT).show();
                 bleDatabaseDevices.remove(adapterPosition);
                 adapter2.notifyDataSetChanged();
-                Toast.makeText(getApplicationContext(), "list第" + adapterPosition + "; 右侧菜单第" + menuPosition, Toast.LENGTH_SHORT).show();
 
             } else if (direction == SwipeMenuRecyclerView.LEFT_DIRECTION) {
                 Toast.makeText(getApplicationContext(), "list第" + adapterPosition + "; 左侧菜单第" + menuPosition, Toast.LENGTH_SHORT).show();
